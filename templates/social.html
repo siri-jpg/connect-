@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="social-section">
+
+<h1 class="social-title">Community Feed</h1>
+
+<div class="post-upload">
+<form action="/upload_post" method="POST" enctype="multipart/form-data">
+<input type="file" name="media" accept="image/*,audio/*" required>
+<button type="submit" class="upload-btn">Post</button>
+</form>
+</div>
+
+<div class="feed-container">
+
+<!-- POST 1 -->
+<div class="post-card">
+
+<img src="{{ url_for('static', filename='posts/sample1.jpg') }}">
+
+<div class="post-actions">
+<button class="like-btn" onclick="likePost(this)">❤️ Like</button>
+<span class="like-count">0</span>
+</div>
+
+<div class="comment-section">
+
+<input type="text" placeholder="Add a comment..." class="comment-input">
+<button onclick="addComment(this)">Post</button>
+
+<ul class="comment-list"></ul>
+
+</div>
+
+</div>
+
+<!-- POST 2 -->
+<div class="post-card">
+
+<audio controls>
+<source src="{{ url_for('static', filename='posts/sample_audio.mp3') }}" type="audio/mpeg">
+</audio>
+
+<div class="post-actions">
+<button class="like-btn" onclick="likePost(this)">❤️ Like</button>
+<span class="like-count">0</span>
+</div>
+
+<div class="comment-section">
+
+<input type="text" placeholder="Add a comment..." class="comment-input">
+<button onclick="addComment(this)">Post</button>
+
+<ul class="comment-list"></ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function likePost(button){
+let count = button.nextElementSibling;
+count.innerText = parseInt(count.innerText) + 1;
+}
+
+function addComment(button){
+
+let commentInput = button.previousElementSibling;
+let commentText = commentInput.value;
+
+if(commentText.trim() === "") return;
+
+let commentList = button.parentElement.querySelector(".comment-list");
+
+let newComment = document.createElement("li");
+newComment.innerText = commentText;
+
+commentList.appendChild(newComment);
+
+commentInput.value="";
+
+}
+
+</script>
+
+{% endblock %}

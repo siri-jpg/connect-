@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unvoiced</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='landingCss.css') }}">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">Unvoiced</div>
+
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="/login" class="login-btn">Sign In</a>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+Real-Time Hand Gesture & 
+<span>Sign Language Detection</span>
+</h1>
+
+<p>
+Unvoiced is a platform that detects hand gestures and interprets
+sign language using real-time camera input. It helps bridge
+communication gaps by converting gestures into readable text
+and making sign language easier to understand and learn.
+</p>
+
+<div class="hero-buttons">
+<button class="primary-btn">Start Detection</button>
+<button class="secondary-btn">Learn Sign Language</button>
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="sign language communication">
+</div>
+
+<!-- floating shapes -->
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features" id="about">
+
+<h2>Features</h2>
+
+<div class="feature-container">
+
+<div class="feature-card">
+<div class="icon">🤟</div>
+<h3>Sign Language Detection</h3>
+<p>Real-time hand gesture detection using camera and machine learning.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">📚</div>
+<h3>Learning Module</h3>
+<p>Interactive tutorials and practice exercises to learn sign language.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">📖</div>
+<h3>Books Module</h3>
+<p>Access books and reading resources to deepen your understanding.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">🌐</div>
+<h3>Social Module</h3>
+<p>Connect with the community and practice sign language together.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how-it-works">
+
+<h2>How It Works</h2>
+
+<div class="steps-container">
+
+<div class="step-card">
+<div class="step-number">1</div>
+<h3>Open Detection Tool</h3>
+<p>Launch the sign language detection tool from the platform.</p>
+</div>
+
+<div class="step-card">
+<div class="step-number">2</div>
+<h3>Show Hand Sign</h3>
+<p>Show your hand gesture in front of the camera.</p>
+</div>
+
+<div class="step-card">
+<div class="step-number">3</div>
+<h3>AI Recognizes Gesture</h3>
+<p>The AI model analyzes the gesture using computer vision.</p>
+</div>
+
+<div class="step-card">
+<div class="step-number">4</div>
+<h3>Gesture Converted to Text</h3>
+<p>The detected sign is translated into readable text.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+<h2>What Our Users Say</h2>
+
+<div class="testimonial-container">
+
+<div class="testimonial-card">
+
+<div class="quote">“</div>
+
+<p>
+Unvoiced helped me communicate with my deaf friend easily.
+The AI detection is surprisingly accurate!
+</p>
+
+<div class="user">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="user">
+
+<div>
+<h4>Rahul Sharma</h4>
+<span>Student</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial-card">
+
+<div class="quote">“</div>
+
+<p>
+The learning module is simple and very interactive.
+I started learning sign language in just a few days.
+</p>
+
+<div class="user">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="user">
+
+<div>
+<h4>Priya Verma</h4>
+<span>Teacher</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial-card">
+
+<div class="quote">“</div>
+
+<p>
+Amazing technology! The sign detection feature works
+smoothly and makes communication easier.
+</p>
+
+<div class="user">
+
+<img src="https://randomuser.me/api/portraits/men/75.jpg" alt="user">
+
+<div>
+<h4>Arjun Patel</h4>
+<span>Developer</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message" rows="5"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h3>Unvoiced</h3>
+<p>
+AI-powered platform helping people learn and translate sign language,
+making communication more inclusive and accessible.
+</p>
+</div>
+
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">Features</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#">Login</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Resources</h4>
+<ul>
+<li><a href="#">Learning Module</a></li>
+<li><a href="#">Books</a></li>
+<li><a href="#">Community</a></li>
+<li><a href="#">Documentation</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Follow Us</h4>
+
+<div class="social-icons">
+
+<a href="#">🌐</a>
+<a href="#">🐦</a>
+<a href="#">📘</a>
+<a href="#">📸</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Unvoiced. All rights reserved.</p>
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

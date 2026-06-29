@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unvoiced | Detection</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<div class="logo">Unvoiced</div>
+
+<ul class="nav-links">
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('books') }}">Books</a></li>
+<li><a href="{{ url_for('courses') }}">Courses</a></li>
+<li><a href="{{ url_for('social') }}">Social</a></li>
+</ul>
+
+<a href="/logout" class="login-btn">Logout</a>
+</nav>
+
+
+<!-- DETECTION AREA -->
+
+<section class="detection-section">
+
+<div class="heading">
+<h1>Real-Time Sign Language Detection</h1>
+<p>Show a hand gesture to the camera and the system will detect the sign instantly.</p>
+</div>
+
+
+<div class="detection-container">
+
+<!-- CAMERA -->
+
+<div class="camera-card">
+<h3>Live Camera</h3>
+
+<div class="camera-frame">
+<img src="/video" class="camera">
+</div>
+
+</div>
+
+
+<!-- PREDICTION -->
+
+<div class="prediction-card">
+
+<h3>Detected Gesture</h3>
+
+<div class="prediction-display">
+<h2 id="predictionText">--</h2>
+</div>
+
+<p class="prediction-info">
+The detected sign will appear here in real time.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+let lastSpoken = "";
+
+function fetchPrediction(){
+
+fetch("/prediction")
+.then(response => response.json())
+.then(data => {
+
+let text = data.prediction;
+
+document.getElementById("predictionText").innerText = text;
+
+if(text && text !== lastSpoken){
+
+const speech = new SpeechSynthesisUtterance(text);
+window.speechSynthesis.speak(speech);
+
+lastSpoken = text;
+
+}
+
+});
+
+}
+
+setInterval(fetchPrediction,1000);
+
+</script>
+
+</body>
+</html>
