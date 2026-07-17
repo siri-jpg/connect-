@@ -21,7 +21,7 @@ Users can upload:
 
 * Voice recordings
 * Photos/images of gestures
-* Videos containing sign language
+
 
 The system processes the uploaded media and attempts to recognize and translate the gestures into understandable text or audio output.
 
